@@ -78,8 +78,6 @@ var td_theme_switcher = (function ()
 		    themechanged(context.theme);
 		});
 		
-		// var preferredStyle = td_theme_switcher.readCookie('preferredStyle');
-		// td_theme_switcher.setStyle(preferredStyle,0);
 	});
 
 	// Callback function for the themeChanged Event of Teams

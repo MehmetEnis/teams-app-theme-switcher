@@ -69,16 +69,13 @@ var td_theme_switcher = (function ()
  
 })();
 
-(function($, td_theme_switcher, window) {
-	// On window load, get the currently saved cookie value of preferredStyle and change theme
-	$(window).load(function(){
-		// On load, always get theme from context
-		// User can change the theme on another tab and our app might not know it
-		microsoftTeams.getContext(function (context) {
+(function(td_theme_switcher, window) {
+
+	window.onload = function() {
+	  	microsoftTeams.getContext(function (context) {
 		    themechanged(context.theme);
 		});
-		
-	});
+	};
 
 	// Callback function for the themeChanged Event of Teams
 	function themechanged(theme)
@@ -88,7 +85,7 @@ var td_theme_switcher = (function ()
 
 	microsoftTeams.registerOnThemeChangeHandler(themechanged);
 
-}(jQuery, td_theme_switcher, window));
+}(td_theme_switcher, window));
 
 
 

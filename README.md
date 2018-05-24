@@ -26,7 +26,7 @@ Clone this repo and insert js->main.js onto your site
 And
 
 ```
-Download microsoft and insert into your site
+Download Microsoft SDK and insert into your site
 ```
 
 
